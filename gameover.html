@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #container {
+            height: 100vh;
+            width: 100vw;
+            background-image: url(Images/Gameovermain.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #but1, #but2 {
+            font-family: 'Creepster', cursive;
+            font-size: 200%;
+            position: absolute;
+            left: 45vw;
+            height: 63px;
+            width: 203px;
+            border-radius: 20px;
+        }
+        #but1 {
+            top: 580px;
+        }
+        #but2 {
+            top: 680px;
+        }
+        #but1:hover, #but2:hover {
+            font-size: 270%;
+        }
+        #score {
+            font-family: 'Creepster', cursive;
+            font-size: 250%;
+            color: white;
+            position: absolute;
+            top: 524px;
+            left: 47vw;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="score">Score: <span id="sc"></span></div>
+        <a href="Grimm_Bird.html"><button id="but1" type="button">Retry</button></a>
+        <a href="index.html"><button id="but2" type="button">Home</button></a>
+    </div>
+    <script>
+        document.getElementById("sc").innerText = localStorage.getItem("finalScore");
+    </script>
+</body>
+</html>

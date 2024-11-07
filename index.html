@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Games</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+        *{
+            font-family:'Creepster', cursive; 
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+
+        }
+        #grimmy{
+            height: 100vh;
+            background-image: url(Images/newfront.webp);
+            background-size: cover;
+        }
+        button{
+            background-color: whitesmoke;
+            font-size: 230%;
+            position: absolute;
+            left: 75vh;
+            top:70vh;
+            height: 80px;
+            width: 220px;
+            border-radius: 10px;
+        }
+        button:hover{
+            font-size: 270%;
+ 
+        }
+        #score{color: red;
+            font-size: 250%;
+            height: 100px;
+            width: 400px;
+            position: absolute;
+            top: 698px;
+            left:45vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="grimmy">
+        <a href="Grimm_Bird.html"><button type="button">Play Now</button></a>
+        <div id="score">High Score: <span id="highs"></span></div>
+    </div>
+    <script>
+        document.getElementById("highs").innerText=localStorage.getItem("highscore")
+    </script>
+</body>
+</html>

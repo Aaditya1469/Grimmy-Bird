@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimmy Bird</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+        * {
+            padding: 0px;
+            margin: 0px;
+            scroll-behavior: none;
+        }
+        
+        #container {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(Images/DALL·E\ 2024-11-05\ 12.13.46\ -\ A\ dark\,\ monochromatic\,\ spooky\ game\ background\ for\ a\ Flappy\ Bird-style\ game\ without\ any\ character\ in\ it.\ The\ scene\ should\ be\ eerie\ and\ atmospheric\,\ wit.webp);
+            height: 890px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        #cont {
+            overflow: hidden;
+            height: 550px;
+            width: 950px;
+            backdrop-filter: blur(8px);
+        }
+        
+        #pole {
+            position: relative;
+            left: 755px;
+            height: 550px;
+            width: 120px;
+            background-color: rgb(67, 66, 66);
+            animation: pole 2.5s infinite linear;
+        }
+        
+        @keyframes pole {
+            0% {
+                left: 900px
+            }
+            100% {
+                left: -180px
+            }
+        }
+        
+        #block {
+            width: 120px;
+            height: 200px;
+            background-color: rgb(118, 113, 113);
+            position: relative;
+            top: -380px;
+            left: 755px;
+            animation: pole 2.5s infinite linear;
+        }
+        
+        #char {
+            position: absolute;
+            top: 100px;
+            height: 120px;
+            width: 140px;
+        }
+        h1{
+            color: whitesmoke   ;
+            font-size:500%;
+            font-family:'Creepster', cursive; 
+            position: absolute;
+            top:0vh;
+            left:58vh;
+        }
+        #scoreb{
+            position: absolute;
+            right: 0;
+            font-family:'Creepster', cursive; 
+            font-size: 230%;
+            height: 80px;
+            width: 250px;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>GRIMMY BIRD</h1>
+        <div id="scoreb">Score : <span id="scoreboard">0</span></div>
+        <div id="cont">
+            <div id="pole"></div>
+            <div id="block"></div>
+            <img src="Images/pngwing.com.png" id="char" alt="Grim_reaper">
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
