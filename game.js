@@ -25,7 +25,7 @@ setInterval(function() {
 
     if (chartop >= 550 || ((poleleft < 110) && (poleleft > -20) && ((ctop + 23 < blocktop) || (ctop > blocktop + 115)))) {
         alert("Game Over")
-        setTimeout(function(){},2000)
+        setTimeout(function(){},1000)
         localStorage.setItem("finalScore", score);
         if(highscre<=score){
             highscre=score;
