@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en" onkeydown="jump()">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-image: url(Images/DALL·E\ 2024-11-05\ 12.13.46\ -\ A\ dark\,\ monochromatic\,\ spooky\ game\ background\ for\ a\ Flappy\ Bird-style\ game\ without\ any\ character\ in\ it.\ The\ scene\ should\ be\ eerie\ and\ atmospheric\,\ wit.webp);
-            height: 890px;
+            height: 100vh;
             display: grid;
             justify-content: center;
             align-content: center;
@@ -25,16 +25,16 @@
         
         #cont {
             overflow: hidden;
-            height: 550px;
-            width: 950px;
+            height: 60vh;
+            width: 70vw;
             backdrop-filter: blur(8px);
         }
         
         #pole {
             position: relative;
             left: 755px;
-            height: 550px;
-            width: 120px;
+            height: 60vh;
+            width: 7vw;
             background-color: rgb(67, 66, 66);
             animation: pole 2.5s infinite linear;
         }
@@ -49,8 +49,8 @@
         }
         
         #block {
-            width: 120px;
-            height: 200px;
+            width: 7vw;
+            height: 22vh;
             background-color: rgb(118, 113, 113);
             position: relative;
             top: -380px;
@@ -61,8 +61,8 @@
         #char {
             position: absolute;
             top: 100px;
-            height: 120px;
-            width: 140px;
+            height: 13vh;
+            width: 9vw;
         }
         h1{
             color: whitesmoke   ;
@@ -77,8 +77,8 @@
             right: 0;
             font-family:'Creepster', cursive; 
             font-size: 230%;
-            height: 80px;
-            width: 250px;
+            height: 12vh;
+            width: 18vw;
             color: whitesmoke;
         }
     </style>

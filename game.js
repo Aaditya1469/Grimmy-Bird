@@ -8,8 +8,8 @@ let highscre=0;
 
 block.addEventListener('animationiteration', () => {
     score += 10;
-    let random = -((Math.random() * 350) + 200);
-    block.style.top = random + "px";
+    let random = -((Math.random() * 40) + 30);
+    block.style.top = random + "vh";
 });
 
 setInterval(function() {
@@ -23,9 +23,9 @@ setInterval(function() {
         character.style.top = (chartop + 3) + "px";
     }
 
-    if (chartop >= 550 || ((poleleft < 110) && (poleleft > -20) && ((ctop + 23 < blocktop) || (ctop > blocktop + 115)))) {
+    if (chartop >= 550 || ((poleleft < 109) && (poleleft > -30) && ((ctop + 30 < blocktop-14) || (ctop > blocktop + 72)))) {
         alert("Game Over")
-        setTimeout(function(){},1000)
+        setTimeout(function(){},2000)
         localStorage.setItem("finalScore", score);
         if(highscre<=score){
             highscre=score;
@@ -41,7 +41,7 @@ function jump() {
     let jumpinterval = setInterval(function() {
         let chartop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
         if ((chartop > 6) && (jumpcount < 15)) {
-            character.style.top = (chartop - 6) + "px";
+            character.style.top = (chartop - 5) + "px";
         }
         if (jumpcount > 20) {
             clearInterval(jumpinterval);
